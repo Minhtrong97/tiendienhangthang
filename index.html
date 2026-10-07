@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thanh toán tiền điện</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#f5f7fb;font-family:Arial,sans-serif;color:#1f2937}
+.wrap{max-width:480px;margin:auto;padding:18px}
+.card{background:#fff;border-radius:22px;padding:24px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+.logo{width:64px;height:64px;border-radius:50%;margin:auto;display:block}
+h1{text-align:center;font-size:25px;margin:14px 0 6px;color:#1557a6}
+.sub{text-align:center;color:#667085;margin-bottom:22px}
+.info{background:#f1f7ff;border-radius:16px;padding:16px;margin-bottom:18px}
+.row{display:flex;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px solid #dbe7f5}
+.row:last-child{border-bottom:0}
+.label{color:#667085} .value{font-weight:700;text-align:right}
+.code{font-size:22px;color:#1557a6;letter-spacing:1px}
+button,.btn{width:100%;border:0;border-radius:14px;padding:15px;margin-top:10px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:block;text-align:center}
+.copy{background:#1557a6;color:#fff}
+.evn{background:#fff;border:2px solid #1557a6;color:#1557a6}
+.note{font-size:13px;line-height:1.55;color:#667085;margin-top:18px}
+.ok{display:none;color:#15803d;text-align:center;margin-top:8px;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+  <div style="text-align:center;font-size:44px">⚡</div>
+  <h1>THANH TOÁN TIỀN ĐIỆN</h1>
+  <div class="sub">Điện lực miền Bắc – Văn Bàn, Lào Cai</div>
+
+  <div class="info">
+    <div class="row"><span class="label">Mã khách hàng</span><span class="value code">PA18VB001273</span></div>
+    <div class="row"><span class="label">Khách hàng</span><span class="value">Khách hàng tiền điện</span></div>
+  </div>
+
+  <button class="copy" onclick="copyCode()">📋 Sao chép mã khách hàng</button>
+  <div id="ok" class="ok">Đã sao chép mã khách hàng ✓</div>
+
+  <a class="btn evn" href="https://cskh.npc.com.vn/" target="_blank" rel="noopener">
+    Mở EVNNPC CSKH để thanh toán
+  </a>
+
+  <div class="note">
+    Sau khi mở ứng dụng/ngân hàng, hãy chọn chức năng thanh toán hóa đơn điện.
+    Kiểm tra đúng tên khách hàng, mã khách hàng và số tiền trước khi xác nhận.
+    Trang này không thu tiền và không lưu thông tin ngân hàng.
+  </div>
+</div>
+</div>
+<script>
+function copyCode(){
+ navigator.clipboard.writeText("PA18VB001273").then(function(){
+   document.getElementById("ok").style.display="block";
+   setTimeout(()=>document.getElementById("ok").style.display="none",1800);
+ });
+}
+</script>
+</body>
+</html>
